@@ -1,0 +1,35 @@
+.a {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: inline-flex;
+  width: 90%;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@mixin btn($left) {
+  display: inline-flex;
+  background-color: transparent;
+  text-decoration: none;
+  align-items: center;
+  @if ($left) {
+    float: left;
+  } @else {
+    float: right;
+  }
+}
+
+.prev {
+  @include btn(true)
+
+}
+
+.next {
+  @include btn(false);
+}

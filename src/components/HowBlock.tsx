@@ -8,10 +8,10 @@ const HowBlock = () => {
         <div className='how-block__content'>
           {howElements.map((element) => {
             return(
-              <div className='' key={element.id}>
+              <div key={element.id}>
                 <img src={`${process.env.PUBLIC_URL}/assets/${element.logo}`}  alt={element.logo.slice(9)}/>
-                <h6>{element.title}</h6>
-                <p style={{"fontSize": '14px'}}>{element.text}</p>
+                <h6 className='headline-sixth'>{element.title}</h6>
+                <p className='bodytext-14'>{element.text}</p>
               </div>
             )
           })

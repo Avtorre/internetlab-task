@@ -24,8 +24,16 @@
   font-size: 40px;
   line-height: 56px;
 }
+.headline-third {
+  font-size: 32px;
+  line-height: 40px;
+}
 .headline-fifth {
   font-size: 20px;
+  line-height: 24px;
+}
+.headline-sixth {
+  font-size: 16px;
   line-height: 24px;
 }
 
@@ -36,6 +44,10 @@
 .bodytext-16 {
   font-size: 16px;
   line-height: 28px;
+}
+.bodytext-14 {
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .main-block {
@@ -49,6 +61,7 @@
   min-height: fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
+  margin-bottom: 40px;
 }
 .main-block__content {
   width: 40%;
@@ -67,18 +80,74 @@
 
 .how-block {
   display: flex;
-  width: 65%;
+  width: 70%;
   text-align: center;
-  margin: 80px auto 0;
+  margin: 40px auto;
   flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .how-block > h2 {
   margin: auto;
 }
 .how-block__content {
   display: flex;
-  margin: auto;
+  text-align: left;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 .how-block__content > div {
-  margin: 0 32px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  min-height: 164px;
+  margin: 100px 5px 0;
+}
+.how-block__content > div > img {
+  display: flex;
+  margin-bottom: 16px;
+  width: 72px;
+}
+.how-block__content > div > h6 {
+  display: flex;
+  margin-bottom: 4px;
+}
+.how-block__content > div > p {
+  display: flex;
+  color: #5E646A;
+}
+
+.third-block {
+  display: flex;
+  width: 70%;
+  margin: 40px auto;
+  text-align: center;
+  vertical-align: middle;
+}
+.third-block__text {
+  display: inline-flex;
+  width: 55%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-right: 5px;
+  align-self: center;
+  flex-direction: column;
+  text-align: left;
+}
+.third-block__text > h3 {
+  margin-bottom: 18px;
+}
+.third-block__text > p {
+  color: #5E646A;
+}
+.third-block > img {
+  width: 45%;
+}
+
+.comments-block {
+  width: 100vw;
+  margin: 40px auto;
+  align-items: center;
+  text-align: center;
+  background-color: #F6F8FA;
 }/*# sourceMappingURL=App.css.map */

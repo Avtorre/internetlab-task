@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className={`bodytext-16 ${classes.links}`}>
         <ul className=''>
           <li><a href="#how"> Как это работает </a></li>
-          <li><a href="/"> 3-й блок </a></li>
+          <li><a href="#third"> 3-й блок </a></li>
           <li><a href="/"> Вопросы и ответы </a></li>
           <li><a href="/"> Форма </a></li>
         </ul>
