@@ -66,6 +66,11 @@ $block-margin: 40px auto;
     font-size: 14px;
     line-height: 24px;
   }
+
+  &-12{
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .main-block {
@@ -176,9 +181,21 @@ $block-margin: 40px auto;
 }
 
 .comments-block {
+  display: flex;
   width: 100vw;
   margin: $block-margin;
+  padding: 50px 0;
+  height: fit-content;
   align-items: center;
   text-align: center;
   background-color: $extra-light-grey;
+
+  &__content {
+    width: 80%;
+    margin: auto;
+
+    &>h2 {
+      margin-bottom: 40px;
+    }
+  }
 }

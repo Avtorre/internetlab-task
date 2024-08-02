@@ -49,6 +49,10 @@
   font-size: 14px;
   line-height: 24px;
 }
+.bodytext-12 {
+  font-size: 12px;
+  line-height: 16px;
+}
 
 .main-block {
   background-image: url("./assets/cover.png");
@@ -145,9 +149,20 @@
 }
 
 .comments-block {
+  display: flex;
   width: 100vw;
   margin: 40px auto;
+  padding: 50px 0;
+  height: -moz-fit-content;
+  height: fit-content;
   align-items: center;
   text-align: center;
   background-color: #F6F8FA;
+}
+.comments-block__content {
+  width: 80%;
+  margin: auto;
+}
+.comments-block__content > h2 {
+  margin-bottom: 40px;
 }/*# sourceMappingURL=App.css.map */

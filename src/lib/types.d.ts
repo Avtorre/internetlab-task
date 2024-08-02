@@ -5,7 +5,7 @@ export type HowElement = {
   text: string
 }
 
-export type CommentCard = {
+export type CommentCardType = {
   id: number;
   pic: string;
   name: string;

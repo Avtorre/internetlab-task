@@ -8,28 +8,63 @@
 .content {
   display: inline-flex;
   width: 90%;
+  height: fit-content;
   margin: auto;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
 @mixin btn($left) {
+  border: none;
   display: inline-flex;
+  z-index: 1;
+  padding: 0 5px;
+  margin: 10px;
   background-color: transparent;
   text-decoration: none;
   align-items: center;
   @if ($left) {
-    float: left;
+    left: left;
   } @else {
-    float: right;
+    right: right;
   }
 }
 
 .prev {
-  @include btn(true)
+  @include btn(true);
+  
+  margin-right: 0;
 
+  &>img:hover[aria-disabled="false"] {
+    filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
+  }
+  &>img[aria-disabled="true"] {
+    filter: invert(87%) sepia(10%) saturate(149%) hue-rotate(166deg) brightness(93%) contrast(87%);
+  }
 }
 
 .next {
   @include btn(false);
+
+  margin-right: 0;
+
+  &>img:hover[aria-disabled="false"] {
+    filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
+  }
+  &>img[aria-disabled="true"] {
+    filter: invert(87%) sepia(10%) saturate(149%) hue-rotate(166deg) brightness(93%) contrast(87%);
+  }
+}
+
+.indicator {
+  background-color: #C2C8CD;
+  border-radius: 14px;
+  width: 10px;
+  height:10px;  
+  display: inline-flex;
+  margin: 15px 1px 0;
+  
+  &-active{
+    background-color: #2A6CEA;
+  }
 }
