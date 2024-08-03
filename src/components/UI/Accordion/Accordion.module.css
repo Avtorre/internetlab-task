@@ -1,0 +1,33 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid #ECEFF2;
+  padding: 20px 0;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+}
+.head > img {
+  margin-left: auto;
+  transition: all 0.2s linear;
+}
+.head > img.open {
+  transform: rotate(-45deg);
+}
+.head > img.close {
+  transform: rotate(0);
+}
+.head:hover {
+  filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
+}
+.head:hover > img {
+  filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
+}
+
+.text {
+  padding: 20px 0 0;
+  color: #5E646A;
+}/*# sourceMappingURL=Accordion.module.css.map */

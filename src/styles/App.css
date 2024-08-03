@@ -41,6 +41,11 @@
   font-size: 18px;
   line-height: 32px;
 }
+.bodytext-18__s-bold {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 600;
+}
 .bodytext-16 {
   font-size: 16px;
   line-height: 28px;
@@ -165,4 +170,22 @@
 }
 .comments-block__content > h2 {
   margin-bottom: 40px;
+}
+
+.qna-block {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 40px auto;
+  text-align: left;
+  align-items: center;
+}
+.qna-block > h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.qna-block__content {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
 }/*# sourceMappingURL=App.css.map */

@@ -5,6 +5,7 @@ import Navbar from './components/UI/Navbar/Navbar';
 import HowBlock from './components/HowBlock';
 import ThirdBlock from './components/ThirdBlock';
 import CommentsBlock from './components/CommentsBlock';
+import QnABlock from './components/QnABlock';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <HowBlock/>
       <ThirdBlock/>
       <CommentsBlock/>
+      <QnABlock/>
     </>
   );
 }

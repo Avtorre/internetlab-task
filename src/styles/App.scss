@@ -55,6 +55,13 @@ $block-margin: 40px auto;
   &-18 {
     font-size: 18px;
     line-height: 32px;
+
+    &__s-bold{
+      font-size: 18px;
+      line-height: 32px;
+      font-weight: 600;
+    }
+
   }
   
   &-16 {
@@ -198,4 +205,26 @@ $block-margin: 40px auto;
       margin-bottom: 40px;
     }
   }
+}
+
+.qna-block {
+  display: flex;
+  flex-direction: column;
+  width: $block-width;
+  margin: $block-margin;
+  text-align: left;
+  align-items: center;
+
+  &>h2 {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__content {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+  }
+
+
 }

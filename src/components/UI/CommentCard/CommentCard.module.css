@@ -23,7 +23,7 @@
   margin-top: 4px;
 }
 
-.hat {
+.head {
   display: flex;
   align-items: left;
   text-align: left;
@@ -32,16 +32,16 @@
   width: 100%;
   align-items: flex-start;
 }
-.hat > img {
+.head > img {
   display: inline-flex;
   border-radius: 100%;
 }
-.hat > div {
+.head > div {
   display: inline-flex;
   margin-left: 15px;
   flex-direction: column;
 }
-.hat > div > p {
+.head > div > p {
   display: flex;
   color: #5E646A;
 }/*# sourceMappingURL=CommentCard.module.css.map */

@@ -6,7 +6,7 @@ const CommentCard: React.FC<CommentCardType> = (comment: CommentCardType) => {
   console.log('comment', comment)
   return (
     <div className={classes.card}>
-      <div className={classes.hat}>
+      <div className={classes.head}>
         <img width={45} src={`${process.env.PUBLIC_URL}/assets/${comment.pic}`}  alt={comment.pic.slice(9)}  />
         <div>
           <h6 className='headline-sixth'>
