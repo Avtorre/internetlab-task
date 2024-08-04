@@ -1,6 +1,6 @@
 import { CommentCardType } from "./types";
 
-export const comments:CommentCardType[]  = [
+export const commentsPlaceholder:CommentCardType[]  = [
   {
     id: 0,
     pic: "pic1.png",
@@ -30,7 +30,3 @@ export const comments:CommentCardType[]  = [
     text: "Каждый из нас понимает очевидную вещь: перспективное планирование предоставляет широкие возможности для анализа существующих паттернов поведения. В своём стремлении улучшить пользовательский опыт мы "
   },
 ]
-
-/**
- * 
- */

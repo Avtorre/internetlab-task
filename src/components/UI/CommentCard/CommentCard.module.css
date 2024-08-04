@@ -3,9 +3,10 @@
   flex-direction: column;
   width: 30%;
   max-width: 340px;
+  min-width: 200px;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 300px;
+  min-height: 310px;
   padding: 20px;
   background-color: white;
   border-radius: 8px;
@@ -44,4 +45,10 @@
 .head > div > p {
   display: flex;
   color: #5E646A;
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    width: 45%;
+  }
 }/*# sourceMappingURL=CommentCard.module.css.map */

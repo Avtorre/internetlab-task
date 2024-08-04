@@ -17,8 +17,8 @@ const Carousel = (props: {children: JSX.Element[], cardsCount:number}) => {
     if (start > props.children.length - (props.cardsCount+1)) {
       setNextDisabled(true)
     }
-    console.log('props.cardCount', props.cardsCount)
-  }, [start, props.children, props.cardsCount])
+    console.log('props', props)
+  }, [start, props])
 
   const prev = () => {
     if (start>0) {
@@ -41,9 +41,13 @@ const Carousel = (props: {children: JSX.Element[], cardsCount:number}) => {
     }
     return indArray
   }
+
+
   return (
     <>
-      <div className={classes.a}>
+      <div 
+        className={classes.carousel__wrapper}
+        >
         <button className={classes.prev} onClick={() => prev()} disabled={prevDisabled}>
           <img  aria-readonly={prevDisabled} src={`${process.env.PUBLIC_URL}/assets/arrow-left.svg`} alt="arrow-left" />
         </button>

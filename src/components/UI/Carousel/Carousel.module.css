@@ -1,4 +1,4 @@
-.a {
+.carousel__wrapper {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -25,10 +25,9 @@
   background-color: transparent;
   text-decoration: none;
   align-items: center;
-  left: left;
   margin-right: 0;
 }
-.prev > img:hover[aria-readonly=false] {
+.prev:hover > img[aria-readonly=false] {
   filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
 }
 .prev > img[aria-readonly=true] {
@@ -44,10 +43,9 @@
   background-color: transparent;
   text-decoration: none;
   align-items: center;
-  right: right;
   margin-right: 0;
 }
-.next > img:hover[aria-readonly=false] {
+.next:hover > img[aria-readonly=false] {
   filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
 }
 .next > img[aria-readonly=true] {
@@ -64,4 +62,17 @@
 }
 .indicator-active {
   background-color: #2A6CEA;
+}
+
+@media screen and (max-width: 900px) {
+  .content {
+    width: 100%;
+    margin: 0;
+  }
+  .prev {
+    margin-left: -1%;
+  }
+  .next {
+    margin-right: -1%;
+  }
 }/*# sourceMappingURL=Carousel.module.css.map */

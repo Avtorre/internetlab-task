@@ -171,6 +171,11 @@
 .comments-block__content > h2 {
   margin-bottom: 40px;
 }
+@media screen and (max-width: 900px) {
+  .comments-block__content {
+    width: 100%;
+  }
+}
 
 .qna-block {
   display: flex;

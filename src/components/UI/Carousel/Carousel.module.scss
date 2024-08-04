@@ -1,4 +1,4 @@
-.a {
+.carousel__wrapper {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -15,7 +15,7 @@
   justify-content: space-evenly;
 }
 
-@mixin btn($left) {
+@mixin btn() {
   border: none;
   display: inline-flex;
   z-index: 1;
@@ -24,20 +24,18 @@
   background-color: transparent;
   text-decoration: none;
   align-items: center;
-  @if ($left) {
-    left: left;
-  } @else {
-    right: right;
-  }
+
 }
 
 .prev {
-  @include btn(true);
+  @include btn();
   
   margin-right: 0;
 
-  &>img:hover[aria-readonly="false"] {
-    filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
+  &:hover {
+    &>img[aria-readonly="false"] {
+      filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
+    }
   }
   &>img[aria-readonly="true"] {
     filter: invert(87%) sepia(10%) saturate(149%) hue-rotate(166deg) brightness(93%) contrast(87%);
@@ -45,13 +43,16 @@
 }
 
 .next {
-  @include btn(false);
+  @include btn();
 
   margin-right: 0;
 
-  &>img:hover[aria-readonly="false"] {
-    filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
+  &:hover {
+    &>img[aria-readonly="false"] {
+      filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
+    }
   }
+
   &>img[aria-readonly="true"] {
     filter: invert(87%) sepia(10%) saturate(149%) hue-rotate(166deg) brightness(93%) contrast(87%);
   }
@@ -67,5 +68,21 @@
   
   &-active{
     background-color: #2A6CEA;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+
+  .content {
+    width: 100%;
+    margin: 0;
+  }
+
+  .prev {
+    margin-left: -1%;
+  }
+  .next {
+    margin-right: -1%;
   }
 }
