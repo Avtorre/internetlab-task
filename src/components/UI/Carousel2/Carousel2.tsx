@@ -3,22 +3,24 @@ import classes from './Carousel.module.css'
 import Indicator from './Indicator';
 
 
-const Carousel = (props: {children: JSX.Element[], cardsCount:number}) => {
+const Carousel = (props: {children: JSX.Element[]}) => {
   const [slides, setSlides] = useState<JSX.Element[]>([]);
   const [start, setStart] = useState(props.children[0].props.id)
   const [prevDisabled, setPrevDisabled] = useState(true)
   const [nextDisabled, setNextDisabled] = useState(false)
 
+  const [cardsCount, setCardsCount] = useState(3)
+  console.log('children', props.children)
+
   useEffect(() => {
-    setSlides(props.children.slice(start,start+props.cardsCount))
+    setSlides(props.children.slice(start,start+cardsCount))
     if (start === 0) {
       setPrevDisabled(true)
     }
-    if (start > props.children.length - (props.cardsCount+1)) {
+    if (start > props.children.length - (cardsCount+1)) {
       setNextDisabled(true)
     }
-    console.log('props.cardCount', props.cardsCount)
-  }, [start, props.children, props.cardsCount])
+  }, [start, props.children])
 
   const prev = () => {
     if (start>0) {
@@ -28,7 +30,7 @@ const Carousel = (props: {children: JSX.Element[], cardsCount:number}) => {
   }
 
   const next = () => {
-    if (start < props.children.length - props.cardsCount) {
+    if (start < props.children.length - cardsCount) {
       setStart(start+1)
       setPrevDisabled(false)
     }
@@ -36,7 +38,7 @@ const Carousel = (props: {children: JSX.Element[], cardsCount:number}) => {
 
   const indicators = () => {
     let indArray = []
-    for (let i = 0; i<props.children.length - (props.cardsCount-1); i++) {
+    for (let i = 0; i<props.children.length - (cardsCount-1); i++) {
       indArray.push(i)
     }
     return indArray
@@ -64,5 +66,5 @@ const Carousel = (props: {children: JSX.Element[], cardsCount:number}) => {
     </>
   )
 }
-
+//
 export default Carousel
