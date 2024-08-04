@@ -1,0 +1,140 @@
+$dangerous-red: #F13636;
+$mid-grey: #C2C8CD;
+$grey: #83898F;
+
+.input__wrapper {
+  display: inline-flex;
+  width: 100%;
+}
+
+.checkbox__wrapper {
+  margin: auto 0;
+  width: 24px;
+  height: 24px;
+}
+
+.input__label {
+  position: absolute;
+  color: $grey;
+  margin-top: 8px;
+  margin-left: 16px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.input_field:placeholder-shown + .input__label  {
+  position: absolute;
+  margin-top: 16px;
+  margin-left: 16px;
+  color: $grey;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.input_field {
+  display: inline-flex;
+  width: 100%;
+  padding: 26px 16px 2px;
+  background-color: #F6F8FA;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  z-index: 0;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:focus {
+    outline-offset: -2px;
+    outline: 2px $mid-grey solid;
+    background-color: white;
+    border-radius: 4px;
+
+    &~.check_circle {
+      z-index: -1;
+    }
+
+    &~.cancel_circle {
+      z-index: -1;
+    }
+
+    &~.helper_text {
+      color: transparent;
+    }
+
+    & + .input__label{
+      position: absolute;
+      color: #83898F;
+      margin-top: 8px;
+      margin-left: 16px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &::placeholder {
+      color: $mid-grey;
+    }
+  }
+
+  &[type = "checkbox"] {
+    width: 24px;
+    height: 24px;
+    appearance: none;
+    padding: 0;
+    outline-offset: -2px;
+    outline: 2px $mid-grey solid;
+    background-color: transparent;
+
+
+    &:checked {
+      outline: none;
+      background-image: url('../../../../public/assets/checkmark.svg');
+      background-size: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #2A6CEA;
+    }
+  }
+  
+}
+
+.helper_text{
+  position: absolute;
+  color: $grey;
+  margin-top: 65px;
+}
+
+.invalid {
+  outline: 2px solid $dangerous-red;
+
+  &~.helper_text {
+    color: $dangerous-red;
+  }
+}
+
+.valid {
+  outline: 2px solid #ECEFF2;
+  background-color: white;
+
+  &~.helper_text {
+    color: transparent;
+  }
+}
+
+.check_circle {
+  display: inline-flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: -30px;
+  z-index: 1;
+}
+
+.cancel_circle {
+  display: inline-flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: -30px;
+  z-index: 1;
+}
+

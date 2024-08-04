@@ -12,3 +12,9 @@ export type CommentCardType = {
   city: string;
   text: string
 }
+
+export type FormDataType = {
+  name: string;
+  sname: string;
+  checkbox: boolean;
+}

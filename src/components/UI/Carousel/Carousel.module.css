@@ -7,6 +7,7 @@
 
 .content {
   display: inline-flex;
+  flex-direction: row;
   width: 90%;
   height: -moz-fit-content;
   height: fit-content;
@@ -27,10 +28,10 @@
   left: left;
   margin-right: 0;
 }
-.prev > img:hover[aria-disabled=false] {
+.prev > img:hover[aria-readonly=false] {
   filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
 }
-.prev > img[aria-disabled=true] {
+.prev > img[aria-readonly=true] {
   filter: invert(87%) sepia(10%) saturate(149%) hue-rotate(166deg) brightness(93%) contrast(87%);
 }
 
@@ -46,10 +47,10 @@
   right: right;
   margin-right: 0;
 }
-.next > img:hover[aria-disabled=false] {
+.next > img:hover[aria-readonly=false] {
   filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
 }
-.next > img[aria-disabled=true] {
+.next > img[aria-readonly=true] {
   filter: invert(87%) sepia(10%) saturate(149%) hue-rotate(166deg) brightness(93%) contrast(87%);
 }
 

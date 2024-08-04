@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import Carousel from './UI/Carousel/Carousel'
 import { comments } from '../lib/comments'
 import CommentCard from './UI/CommentCard/CommentCard'
@@ -7,6 +7,8 @@ import { CommentCardType } from '../lib/types'
 
 
 const CommentsBlock = () => {
+
+  
   return (
     <div className='comments-block' id='comments'>
       <div className='comments-block__content'>
@@ -14,7 +16,7 @@ const CommentsBlock = () => {
         <Carousel>
           {comments.map((comment: CommentCardType) => {
             return (
-            <CommentCard key={comment.id} {...comment}/>
+              <CommentCard key={comment.id}  {...comment}/>
           )
           })}
         </Carousel>

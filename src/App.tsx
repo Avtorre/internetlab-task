@@ -6,6 +6,9 @@ import HowBlock from './components/HowBlock';
 import ThirdBlock from './components/ThirdBlock';
 import CommentsBlock from './components/CommentsBlock';
 import QnABlock from './components/QnABlock';
+import ArticleBlock from './components/ArticleBlock';
+import FormBlock from './components/FormBlock';
+import Footer from './components/UI/Footer/Footer';
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
       <ThirdBlock/>
       <CommentsBlock/>
       <QnABlock/>
+      <ArticleBlock/>
+      <FormBlock/>
+      <Footer/>
     </>
   );
 }

@@ -3,7 +3,6 @@ import classes from './CommentCard.module.css'
 import { CommentCardType } from '../../../lib/types'
 
 const CommentCard: React.FC<CommentCardType> = (comment: CommentCardType) => {
-  console.log('comment', comment)
   return (
     <div className={classes.card}>
       <div className={classes.head}>

@@ -12,7 +12,7 @@
 }
 .head > img {
   margin-left: auto;
-  transition: all 0.2s linear;
+  transition: all 0.1s linear;
 }
 .head > img.open {
   transform: rotate(-45deg);

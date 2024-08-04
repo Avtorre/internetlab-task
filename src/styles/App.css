@@ -188,4 +188,71 @@
   display: flex;
   width: 90%;
   flex-direction: column;
+}
+
+.article-block {
+  width: 100%;
+  margin: 40px auto;
+  background-color: #F6F8FA;
+}
+.article-block__content {
+  padding: 70px 0;
+  display: grid;
+  width: 70%;
+  margin: auto;
+  grid-template-columns: repeat(2, auto);
+  gap: 37px 32px;
+}
+.article-block__content-title {
+  margin-bottom: 17px;
+}
+
+.form-block {
+  display: flex;
+  flex-direction: column;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  width: 55%;
+  margin: 40px auto;
+  gap: 30px 0;
+}
+.form-block > h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.form-block__inputs {
+  width: 100%;
+  min-width: 600px;
+  display: flex;
+  margin: auto;
+  gap: 32px;
+}
+.form-block__inputs > Input {
+  display: inline-flex;
+  width: 49%;
+}
+.form-block__submit {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  gap: 32px;
+  align-items: flex-start;
+}
+.form-block__submit > Button {
+  display: inline-flex;
+  justify-content: center;
+  width: 49%;
+  min-width: 252.5px;
+}
+.form-block__submit > label {
+  display: inline-flex;
+  width: 49%;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: 250px;
+  gap: 0 14px;
+  align-items: center;
+}
+.form-block__checkbox {
+  width: 36px;
 }/*# sourceMappingURL=App.css.map */

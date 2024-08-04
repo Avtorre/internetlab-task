@@ -1,4 +1,3 @@
-import React from 'react'
 import classes from './navbar.module.css'
 
 const Navbar = () => {
@@ -11,8 +10,8 @@ const Navbar = () => {
         <ul className=''>
           <li><a href="#how"> Как это работает </a></li>
           <li><a href="#third"> 3-й блок </a></li>
-          <li><a href="/"> Вопросы и ответы </a></li>
-          <li><a href="/"> Форма </a></li>
+          <li><a href="#qna"> Вопросы и ответы </a></li>
+          <li><a href="#form"> Форма </a></li>
         </ul>
       </div>
     </div>

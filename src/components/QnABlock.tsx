@@ -4,7 +4,7 @@ import Accordion from './UI/Accordion/Accordion'
 
 const QnABlock = () => {
   return (
-    <div className='qna-block'>
+    <div className='qna-block' id='qna'>
       <h2 className='headline-second'>Вопросы и ответы</h2>
       <div className='qna-block__content'>
         {qna.map((item, index ) => {
