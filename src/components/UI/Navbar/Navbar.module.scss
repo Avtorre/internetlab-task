@@ -11,9 +11,10 @@
   &_btn {
     position: absolute;
     z-index: -1;
-    top: 13px;
-    right: 5px;
     padding: 30px;
+    top: 0;
+    right: 5px;
+    margin-top: -100%;
   }
 }
 
@@ -91,6 +92,8 @@
   .nav_btn {
     z-index: 3;
     position: absolute;
+    top: 13px;
+    margin-top: 0;
   }
 
   .links {
@@ -115,9 +118,10 @@
     background-color: white;
     z-index: 2;
     overflow: hidden;
-    
-    .nav_btn {
+
+    &+.nav_btn {
       position: fixed;
+      margin-top: 0;
     }
 
     .name{

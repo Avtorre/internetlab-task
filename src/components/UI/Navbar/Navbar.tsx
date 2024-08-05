@@ -6,7 +6,6 @@ const Navbar = () => {
 
   return (
     <>
-      <img src={`${(hidden) ?`${process.env.PUBLIC_URL}/assets/nav-menu.svg` : `${process.env.PUBLIC_URL}/assets/nav-cross.svg`}`} className={classes.nav_btn} onClick={(e) => setHidden(!hidden)}/>
       <div className={classes.nav} aria-disabled={hidden}>
         <div className={classes.name}>
           <img className={classes.logo} src={`${process.env.PUBLIC_URL}/assets/testLab.svg`} alt="testLab.svg" />
@@ -24,6 +23,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+      <img src={`${(hidden) ?`${process.env.PUBLIC_URL}/assets/nav-menu.svg` : `${process.env.PUBLIC_URL}/assets/nav-cross.svg`}`} className={classes.nav_btn} onClick={(e) => setHidden(!hidden)}/>
     </>
   )
 }
