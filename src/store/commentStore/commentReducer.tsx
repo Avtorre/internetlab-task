@@ -1,7 +1,6 @@
 
 import { createSlice } from "@reduxjs/toolkit"
 import { CommentCardType } from "../../lib/types"
-import { commentsPlaceholder } from "../../lib/commentsPlaceholder"
 
 const initialState: CommentCardType[] = []
 
@@ -10,7 +9,6 @@ const commentSlice = createSlice({
     initialState,
     reducers: {
         setComments: (state, action: {payload: CommentCardType[]}) => {
-          console.log('state, action', state, action)
           return state =  action.payload
         },
         addComment: (state, action) => {

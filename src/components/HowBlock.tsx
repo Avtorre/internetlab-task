@@ -10,8 +10,10 @@ const HowBlock = () => {
             return(
               <div key={element.id}>
                 <img src={`${process.env.PUBLIC_URL}/assets/${element.logo}`}  alt={element.logo.slice(9)}/>
-                <h6 className='headline-sixth'>{element.title}</h6>
-                <p className='bodytext-14'>{element.text}</p>
+                <div className='how-block__content-text'>        
+                  <h6 className='headline-sixth'>{element.title}</h6>
+                  <p className='bodytext-14'>{element.text}</p>
+                </div>
               </div>
             )
           })

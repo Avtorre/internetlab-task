@@ -16,9 +16,9 @@ const CommentsBlock = () => {
   const comments: CommentCardType[] = useSelector((state:RootState) => state.comments)
 
   const checkwidth = () => {
-    if (window.innerWidth> 900) {
+    if (window.innerWidth > 900) {
       setCardsCount(3)
-    } else if (window.innerWidth<376 ) {
+    } else if (window.innerWidth < 509 ) {
       setCardsCount(1)
     } else {
       setCardsCount(2)
@@ -29,7 +29,7 @@ const CommentsBlock = () => {
     const getComments = async () => {
       //пример реализации загрузки отзывов с сервера(в данном случае, конечно, никакой загрузки не происходит и данный импортируются из локального хранилища)
       //если данные статичны и их не нужно подгружать, то их можно прописать в initialstate редьюсера или вообще обойтись без redux'а 
-      dispatch( setComments( await commentsPlaceholder))
+      dispatch(setComments( await commentsPlaceholder))
       setLoading(false)
     }
     getComments()

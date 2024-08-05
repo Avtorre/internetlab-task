@@ -105,8 +105,15 @@
   position: absolute;
   color: #83898F;
   margin-top: 65px;
+  max-width: 70%;
+  word-break: break-word;
 }
 
+@media screen and (max-width: 650px) and (min-width: 500px) {
+  .helper_text {
+    max-width: 235px;
+  }
+}
 .invalid {
   outline: 2px solid #F13636;
 }

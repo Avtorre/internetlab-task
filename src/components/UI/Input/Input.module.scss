@@ -103,6 +103,14 @@ $grey: #83898F;
   position: absolute;
   color: $grey;
   margin-top: 65px;
+  max-width: 70%;
+  word-break: break-word;
+}
+
+@media screen and (max-width: 650px) and (min-width: 500px) {
+  .helper_text{
+    max-width: 235px;
+  }
 }
 
 .invalid {

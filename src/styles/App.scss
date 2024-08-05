@@ -40,6 +40,11 @@ $block-margin: 40px auto;
     line-height: 40px;
   }
 
+  &-fourth {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
   &-fifth {
     font-size: 20px;
     line-height: 24px;
@@ -92,7 +97,7 @@ $block-margin: 40px auto;
   margin-bottom: 40px;
 
   &__content {
-    width: 40%;
+    width: 47%;
     margin: auto;
     margin-top: auto;
     text-align: center;
@@ -109,6 +114,53 @@ $block-margin: 40px auto;
 
   }
 }
+
+@media screen and (max-width: 900px) {
+  .main-block {
+
+    &__content {
+
+      width: $block-width;
+
+      &>h1{
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      &>p {
+        font-size: 16px;
+        line-height: 28px;
+      }
+
+      &>button {
+        margin-top: 40px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-block {
+
+    &__content {
+
+      width: 90%;
+
+      &>h1{
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      &>button {
+        margin-top: 25px;
+        min-width: 250px;
+      }
+    }
+
+  }
+}
+
 
 .how-block {
   display: flex;
@@ -127,9 +179,18 @@ $block-margin: 40px auto;
     text-align: left;
     align-items: flex-start;
     justify-content: space-around;
-    //height: fit-content;
-    
 
+    &-text {
+      &>h6 {
+        display: flex;
+        margin-bottom: 4px;
+      }
+
+      &>p {
+        display: flex;
+        color: $dark-grey;
+      }
+    }
     &>div{
       display: flex;
       flex-direction: column;
@@ -141,19 +202,66 @@ $block-margin: 40px auto;
         display: flex;
         margin-bottom: 16px;
         width: 72px;
-      }
-
-      &>h6 {
-        display: flex;
-        margin-bottom: 4px;
-      }
-
-      &>p {
-        display: flex;
-        color: $dark-grey;
-      }
+      } 
     }
   }
+}
+
+@media screen and (max-width: 900px) {
+
+  .how-block{
+    width: 95%;
+
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 35px;
+      margin-top: 40px;
+
+      &-text {
+        display: inline-flex;
+        flex-direction: column;
+        width: fit-content;
+        margin-left: 25px;
+        &>p {
+          width: fit-content;
+        }
+      }
+
+      &>div{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+        min-height: fit-content;
+        margin:  0;
+
+        &>img {
+          display: inline-flex;
+          width: 56px;
+        }
+      }
+
+    }
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+  .how-block {
+    width: 90%;
+
+    &>h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__content {
+      grid-template-columns: repeat(1, auto);
+    }
+  }
+  
+
 }
 
 .third-block {
@@ -187,6 +295,37 @@ $block-margin: 40px auto;
   }
 }
 
+@media screen and (max-width: 900px) {
+  .third-block {
+    width: 95%;
+
+    &__text {
+
+      &>h3 { 
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .third-block {
+    flex-direction: column-reverse;
+    width: 90%;
+    
+
+    &>img{
+      width: 100%;
+    }
+
+    &__text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
 .comments-block {
   display: flex;
   width: 100vw;
@@ -198,7 +337,7 @@ $block-margin: 40px auto;
   background-color: $extra-light-grey;
 
   &__content {
-    width: 80%;
+    width: 85%;
     margin: auto;
 
     &>h2 {
@@ -209,6 +348,16 @@ $block-margin: 40px auto;
   @media screen and (max-width: 900px){
     &__content {
       width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 500px){
+    &__content {
+
+      &>h2 {
+        font-size: 24px;
+        line-height: 32px;
+      }
     }
   }
 }
@@ -233,6 +382,21 @@ $block-margin: 40px auto;
   }
 }
 
+@media screen and (max-width: 900px) {
+  .qna-block {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .qna-block {
+    &>h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+
 .article-block {
   width: 100%;
   margin: $block-margin;
@@ -248,6 +412,15 @@ $block-margin: 40px auto;
 
     &-title {
       margin-bottom: 17px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    
+    &__content {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
     }
   }
 }
@@ -308,4 +481,66 @@ $block-margin: 40px auto;
   &__checkbox {
     width: 36px;
   }
+}
+
+@media screen and (max-width: 900px) {
+    
+  .form-block {
+    width: 95%;
+    gap: 38px 0;
+    margin: 0 10px;
+
+    &__inputs {
+      min-width: 0;
+      width: 100%;
+
+      &>Input {
+        min-width: fit-content;
+      }
+    }
+
+    &__submit {
+      min-width: fit-content;
+
+      &>Button {
+        min-width: fit-content;
+      }
+  
+      &>label{
+        min-width: fit-content;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+    
+  .form-block {
+    gap: 40px 0;
+
+    &>h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 40px 0;
+    }
+
+    &__submit {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+
+      &>Button {
+        margin: auto;
+        width: 100%;
+      }
+    }
+  }
+
 }

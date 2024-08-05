@@ -50,5 +50,14 @@
 @media screen and (max-width: 900px) {
   .card {
     width: 45%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card {
+    width: 85%;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
   }
 }/*# sourceMappingURL=CommentCard.module.css.map */

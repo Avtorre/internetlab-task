@@ -8,7 +8,7 @@ const MainBlock = () => {
         <h1 className='headline-first'>
           Говорят, никогда не поздно сменить профессию
         </h1>
-        <p>
+        <p className='bodytext-16'>
           Сделай круто тестовое задание и у тебя получится
         </p>
         <Button variant='main'>

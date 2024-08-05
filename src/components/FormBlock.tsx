@@ -7,13 +7,13 @@ import usePost from '../hooks/usePost'
 const FormBlock = () => {
   const [formData, setFormData] = useState<FormDataType>({
     name: '',
-    sname:'',
+    phone:'',
     checkbox: false
   })
   const {post} = usePost()
   const form =  document.getElementById('form') as HTMLFormElement
   const [nameValid, setNameValid] = useState<"valid" | "invalid">()
-  const [sNameValid, setSNameValid] = useState<"valid" | "invalid">()
+  const [phoneValid, setPhoneValid] = useState<"valid" | "invalid">()
 
   const validateName = (name: string) => {
     if ((name.at(0) === name.at(0)?.toUpperCase()) && (name.length > 1)) {
@@ -25,35 +25,37 @@ const FormBlock = () => {
     }
   }
 
-  const validateSName = (sname: string) => {
-    if ((sname.at(0) === sname.at(0)?.toUpperCase()) && (sname.length > 1)) {
-      setSNameValid('valid')
+  const validateSName = (phone: string) => {
+    if ((phone.length > 8) && (parseInt(phone).toString().length === phone.length)) {
+      setPhoneValid('valid')
       return true
     } else {
-      setSNameValid('invalid')
+      setPhoneValid('invalid')
       return false
     }
   }
 
   const onSubmit = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault()
-    if ((validateName(formData.name)) && validateSName(formData.sname)) {
+    if ((validateName(formData.name)) && validateSName(formData.phone)) {
       console.log('formData', formData)
       post({url:'0.0.0.0//some.server.ok', formData})
       if (form){
         form.reset()
         setFormData({
           name: '',
-          sname:'',
+          phone:'',
           checkbox: false
         }) 
       }
+      setNameValid(undefined)
+      setPhoneValid(undefined)
     } else {
       if (!formData.name.length) {
         setNameValid('invalid')
       }
-      if (!formData.sname.length) {
-        setSNameValid('invalid')
+      if (!formData.phone.length) {
+        setPhoneValid('invalid')
       }
     }
   }
@@ -77,14 +79,14 @@ const FormBlock = () => {
         />
         <Input 
           onChange={(e:React.ChangeEvent<HTMLInputElement>) => {
-            setFormData({...formData, sname: e.target.value,})
+            setFormData({...formData, phone: e.target.value,})
             validateSName(e.target.value)
           }} 
-          aria-label='Фамилия' 
-          placeholder='Введите фамилию...' 
-          name='sname'
-          about='Должно начинать с большой буквы, мин. 2 символа'
-          aria-labelledby = {sNameValid}
+          aria-label='Телефон' 
+          placeholder='Введите телефон...' 
+          name='phone'
+          about='Только цифры, мин. 9 символов'
+          aria-labelledby = {phoneValid}
         />
       </div>
       <div className='form-block__submit'>

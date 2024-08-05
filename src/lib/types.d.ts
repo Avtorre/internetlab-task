@@ -15,6 +15,6 @@ export type CommentCardType = {
 
 export type FormDataType = {
   name: string;
-  sname: string;
+  phone: string;
   checkbox: boolean;
 }

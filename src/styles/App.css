@@ -28,6 +28,10 @@
   font-size: 32px;
   line-height: 40px;
 }
+.headline-fourth {
+  font-size: 24px;
+  line-height: 32px;
+}
 .headline-fifth {
   font-size: 20px;
   line-height: 24px;
@@ -73,7 +77,7 @@
   margin-bottom: 40px;
 }
 .main-block__content {
-  width: 40%;
+  width: 47%;
   margin: auto;
   margin-top: auto;
   text-align: center;
@@ -87,6 +91,35 @@
   margin-top: 15%;
 }
 
+@media screen and (max-width: 900px) {
+  .main-block__content {
+    width: 70%;
+  }
+  .main-block__content > h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .main-block__content > p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .main-block__content > button {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-block__content {
+    width: 90%;
+  }
+  .main-block__content > h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .main-block__content > button {
+    margin-top: 25px;
+    min-width: 250px;
+  }
+}
 .how-block {
   display: flex;
   width: 70%;
@@ -105,6 +138,14 @@
   align-items: flex-start;
   justify-content: space-around;
 }
+.how-block__content-text > h6 {
+  display: flex;
+  margin-bottom: 4px;
+}
+.how-block__content-text > p {
+  display: flex;
+  color: #5E646A;
+}
 .how-block__content > div {
   display: flex;
   flex-direction: column;
@@ -117,15 +158,54 @@
   margin-bottom: 16px;
   width: 72px;
 }
-.how-block__content > div > h6 {
-  display: flex;
-  margin-bottom: 4px;
-}
-.how-block__content > div > p {
-  display: flex;
-  color: #5E646A;
-}
 
+@media screen and (max-width: 900px) {
+  .how-block {
+    width: 95%;
+  }
+  .how-block__content {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 35px;
+    margin-top: 40px;
+  }
+  .how-block__content-text {
+    display: inline-flex;
+    flex-direction: column;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 25px;
+  }
+  .how-block__content-text > p {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .how-block__content > div {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    margin: 0;
+  }
+  .how-block__content > div > img {
+    display: inline-flex;
+    width: 56px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .how-block {
+    width: 90%;
+  }
+  .how-block > h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .how-block__content {
+    grid-template-columns: repeat(1, auto);
+  }
+}
 .third-block {
   display: flex;
   width: 70%;
@@ -153,6 +233,28 @@
   width: 45%;
 }
 
+@media screen and (max-width: 900px) {
+  .third-block {
+    width: 95%;
+  }
+  .third-block__text > h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .third-block {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+  .third-block > img {
+    width: 100%;
+  }
+  .third-block__text {
+    width: 100%;
+    text-align: center;
+  }
+}
 .comments-block {
   display: flex;
   width: 100vw;
@@ -165,7 +267,7 @@
   background-color: #F6F8FA;
 }
 .comments-block__content {
-  width: 80%;
+  width: 85%;
   margin: auto;
 }
 .comments-block__content > h2 {
@@ -174,6 +276,12 @@
 @media screen and (max-width: 900px) {
   .comments-block__content {
     width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .comments-block__content > h2 {
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 
@@ -195,6 +303,17 @@
   flex-direction: column;
 }
 
+@media screen and (max-width: 900px) {
+  .qna-block {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .qna-block > h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
 .article-block {
   width: 100%;
   margin: 40px auto;
@@ -210,6 +329,13 @@
 }
 .article-block__content-title {
   margin-bottom: 17px;
+}
+@media screen and (max-width: 900px) {
+  .article-block__content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
 }
 
 .form-block {
@@ -260,4 +386,56 @@
 }
 .form-block__checkbox {
   width: 36px;
+}
+
+@media screen and (max-width: 900px) {
+  .form-block {
+    width: 95%;
+    gap: 38px 0;
+    margin: 0 10px;
+  }
+  .form-block__inputs {
+    min-width: 0;
+    width: 100%;
+  }
+  .form-block__inputs > Input {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .form-block__submit {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .form-block__submit > Button {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .form-block__submit > label {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+}
+@media screen and (max-width: 500px) {
+  .form-block {
+    gap: 40px 0;
+  }
+  .form-block > h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .form-block__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+  }
+  .form-block__submit {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .form-block__submit > Button {
+    margin: auto;
+    width: 100%;
+  }
 }/*# sourceMappingURL=App.css.map */

@@ -17,8 +17,7 @@ const Carousel = (props: {children: JSX.Element[], cardsCount:number}) => {
     if (start > props.children.length - (props.cardsCount+1)) {
       setNextDisabled(true)
     }
-    console.log('props', props)
-  }, [start, props])
+  }, [start, props.children, props.cardsCount])
 
   const prev = () => {
     if (start>0) {
