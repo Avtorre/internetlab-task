@@ -16,10 +16,10 @@ const Navbar = () => {
       
         <div className={`bodytext-16 ${classes.links}`}>
           <ul className=''>
-            <li onClick={(e) => setHidden(!hidden)}><a href="#how"> Как это работает <img src={`${process.env.PUBLIC_URL}/assets/arrow-right-small.svg`} alt="arrow-right-small" /></a>  </li>
-            <li onClick={(e) => setHidden(!hidden)}><a href="#third"> 3-й блок <img src={`${process.env.PUBLIC_URL}/assets/arrow-right-small.svg`} alt="arrow-right-small" /></a>  </li>
-            <li onClick={(e) => setHidden(!hidden)}><a href="#qna"> Вопросы и ответы <img src={`${process.env.PUBLIC_URL}/assets/arrow-right-small.svg`} alt="arrow-right-small" /></a>  </li>
-            <li onClick={(e) => setHidden(!hidden)}><a href="#form"> Форма <img src={`${process.env.PUBLIC_URL}/assets/arrow-right-small.svg`} alt="arrow-right-small" /> </a>  </li>
+            <li onClick={(e) => setHidden(true)}><a href="#how"> Как это работает <img src={`${process.env.PUBLIC_URL}/assets/arrow-right-small.svg`} alt="arrow-right-small" /></a>  </li>
+            <li onClick={(e) => setHidden(true)}><a href="#third"> 3-й блок <img src={`${process.env.PUBLIC_URL}/assets/arrow-right-small.svg`} alt="arrow-right-small" /></a>  </li>
+            <li onClick={(e) => setHidden(true)}><a href="#qna"> Вопросы и ответы <img src={`${process.env.PUBLIC_URL}/assets/arrow-right-small.svg`} alt="arrow-right-small" /></a>  </li>
+            <li onClick={(e) => setHidden(true)}><a href="#form"> Форма <img src={`${process.env.PUBLIC_URL}/assets/arrow-right-small.svg`} alt="arrow-right-small" /> </a>  </li>
           </ul>
         </div>
       </div>
