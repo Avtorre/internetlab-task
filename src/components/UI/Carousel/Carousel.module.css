@@ -28,11 +28,12 @@
   cursor: pointer;
   margin-right: 0;
 }
-.prev:hover > img[aria-readonly=false] {
+.prev:hover {
   filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
 }
-.prev > img[aria-readonly=true] {
+.prev:disabled {
   filter: invert(87%) sepia(10%) saturate(149%) hue-rotate(166deg) brightness(93%) contrast(87%);
+  cursor: default;
 }
 
 .next {
@@ -47,11 +48,12 @@
   cursor: pointer;
   margin-right: 0;
 }
-.next:hover > img[aria-readonly=false] {
+.next:hover {
   filter: invert(31%) sepia(97%) saturate(3775%) hue-rotate(215deg) brightness(101%) contrast(83%);
 }
-.next > img[aria-readonly=true] {
+.next:disabled {
   filter: invert(87%) sepia(10%) saturate(149%) hue-rotate(166deg) brightness(93%) contrast(87%);
+  cursor: default;
 }
 
 .indicator {

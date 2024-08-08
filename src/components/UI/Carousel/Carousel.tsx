@@ -48,13 +48,13 @@ const Carousel = (props: {children: JSX.Element[], cardsCount:number}) => {
         className={classes.carousel__wrapper}
         >
         <button className={classes.prev} onClick={() => prev()} disabled={prevDisabled}>
-          <img  aria-readonly={prevDisabled} src={`${process.env.PUBLIC_URL}/assets/arrow-left.svg`} alt="arrow-left" />
+          <img src={`${process.env.PUBLIC_URL}/assets/arrow-left.svg`} alt="arrow-left" />
         </button>
         <div className={classes.content} >
           {slides}
         </div>
         <button className={classes.next} onClick={() => next()} disabled={nextDisabled}>
-          <img aria-readonly={nextDisabled} src={`${process.env.PUBLIC_URL}/assets/arrow-right.svg`} alt="arrow-right" />
+          <img src={`${process.env.PUBLIC_URL}/assets/arrow-right.svg`} alt="arrow-right" />
         </button>  
       </div>
       <div>
