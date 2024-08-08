@@ -9,6 +9,7 @@
 .head {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .head > img {
   margin-left: auto;

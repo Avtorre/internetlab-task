@@ -464,7 +464,6 @@ $block-margin: 40px auto;
       display: inline-flex;
       justify-content: center;
       width: 49%;
-  
       min-width: 252.5px;
     }
 
@@ -475,6 +474,7 @@ $block-margin: 40px auto;
       min-width: 250px;
       gap: 0 14px;
       align-items: center;
+      cursor: pointer;
     }
   }
 
@@ -501,7 +501,7 @@ $block-margin: 40px auto;
 
     &__submit {
       min-width: fit-content;
-
+      margin-bottom: 30px;
       &>Button {
         min-width: fit-content;
       }

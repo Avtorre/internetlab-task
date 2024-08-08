@@ -25,6 +25,7 @@
   background-color: transparent;
   text-decoration: none;
   align-items: center;
+  cursor: pointer;
   margin-right: 0;
 }
 .prev:hover > img[aria-readonly=false] {
@@ -43,6 +44,7 @@
   background-color: transparent;
   text-decoration: none;
   align-items: center;
+  cursor: pointer;
   margin-right: 0;
 }
 .next:hover > img[aria-readonly=false] {

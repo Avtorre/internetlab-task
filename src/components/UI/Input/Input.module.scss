@@ -20,6 +20,7 @@ $grey: #83898F;
   margin-left: 16px;
   font-size: 14px;
   line-height: 24px;
+  cursor: pointer;
 }
 
 .input_field:placeholder-shown + .input__label  {
@@ -45,11 +46,16 @@ $grey: #83898F;
     color: transparent;
   }
 
+  &:placeholder-shown {
+    cursor: pointer;
+  }
+
   &:focus {
     outline-offset: -2px;
     outline: 2px $mid-grey solid;
     background-color: white;
     border-radius: 4px;
+    cursor: auto;
 
     &~.check_circle {
       z-index: -1;
@@ -70,6 +76,7 @@ $grey: #83898F;
       margin-left: 16px;
       font-size: 14px;
       line-height: 24px;
+      cursor: auto;
     }
 
     &::placeholder {
@@ -85,7 +92,6 @@ $grey: #83898F;
     outline-offset: -2px;
     outline: 2px $mid-grey solid;
     background-color: transparent;
-
 
     &:checked {
       outline: none;

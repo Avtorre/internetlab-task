@@ -383,6 +383,7 @@
   min-width: 250px;
   gap: 0 14px;
   align-items: center;
+  cursor: pointer;
 }
 .form-block__checkbox {
   width: 36px;
@@ -405,6 +406,7 @@
   .form-block__submit {
     min-width: -moz-fit-content;
     min-width: fit-content;
+    margin-bottom: 30px;
   }
   .form-block__submit > Button {
     min-width: -moz-fit-content;

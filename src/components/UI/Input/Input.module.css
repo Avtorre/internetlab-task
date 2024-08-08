@@ -16,6 +16,7 @@
   margin-left: 16px;
   font-size: 14px;
   line-height: 24px;
+  cursor: pointer;
 }
 
 .input_field:-moz-placeholder-shown + .input__label {
@@ -52,11 +53,18 @@
 .input_field::placeholder {
   color: transparent;
 }
+.input_field:-moz-placeholder-shown {
+  cursor: pointer;
+}
+.input_field:placeholder-shown {
+  cursor: pointer;
+}
 .input_field:focus {
   outline-offset: -2px;
   outline: 2px #C2C8CD solid;
   background-color: white;
   border-radius: 4px;
+  cursor: auto;
 }
 .input_field:focus ~ .check_circle {
   z-index: -1;
@@ -74,6 +82,7 @@
   margin-left: 16px;
   font-size: 14px;
   line-height: 24px;
+  cursor: auto;
 }
 .input_field:focus::-moz-placeholder {
   color: #C2C8CD;
