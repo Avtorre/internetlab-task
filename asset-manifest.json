@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/internetlab-task/static/css/main.a5a32c33.css",
+    "main.css": "/internetlab-task/static/css/main.4a2748c5.css",
     "main.js": "/internetlab-task/static/js/main.eed7e392.js",
     "static/media/cover.png": "/internetlab-task/static/media/cover.fd1d128d1b93cd94d813.png",
     "index.html": "/internetlab-task/index.html",
     "static/media/checkmark.svg": "/internetlab-task/static/media/checkmark.91bc6000272299a1f658.svg",
-    "main.a5a32c33.css.map": "/internetlab-task/static/css/main.a5a32c33.css.map",
+    "main.4a2748c5.css.map": "/internetlab-task/static/css/main.4a2748c5.css.map",
     "main.eed7e392.js.map": "/internetlab-task/static/js/main.eed7e392.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5a32c33.css",
+    "static/css/main.4a2748c5.css",
     "static/js/main.eed7e392.js"
   ]
 }
