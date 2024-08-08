@@ -1,1 +1,1 @@
-Based on figma layout.
+Based on figma layout by "Лаборатория интернет (https://internetlab.ru/)".
